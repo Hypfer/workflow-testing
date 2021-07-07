@@ -22,6 +22,10 @@
         {
           "name": "ls",
           "run": "pwd && ls -R .git"
+        },
+        {
+          "name": "cat head",
+          "run": "cat .git/refs/heads/master"
         }
       ]
     }
