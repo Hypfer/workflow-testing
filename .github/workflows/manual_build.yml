@@ -1,0 +1,29 @@
+# Very similar to the release build.
+# Feel free to merge those into a single yaml
+{
+  "name": "Manual Build",
+  "on": [
+    "workflow_dispatch"
+  ],
+  "jobs": {
+    "build-valetudo": {
+      "runs-on": "ubuntu-latest",
+      "steps": [
+        {
+          "uses": "actions/checkout@v2"
+        },
+        {
+          "name": "Use Node.js 16.x",
+          "uses": "actions/setup-node@v1",
+          "with": {
+            "node-version": "16.x"
+          }
+        },
+        {
+          "name": "ls",
+          "run": "pwd && ls"
+        }
+      ]
+    }
+  }
+}
